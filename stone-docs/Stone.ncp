@@ -1,0 +1,537 @@
+<Project>
+  <Name>Stone</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Class</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Interface">
+        <Name>iStoneTool</Name>
+        <Access>Public</Access>
+        <Location left="683" top="78" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void registerUser()</Member>
+        <Member type="Method">void getUpdates()</Member>
+        <Member type="Method">void scan()</Member>
+        <Member type="Method">void alarm()</Member>
+        <Member type="Method">void notify()</Member>
+        <Member type="Method">void upload()</Member>
+        <Member type="Method">void start()</Member>
+        <Member type="Method">void stop()</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>StoneTool</Name>
+        <Access>Public</Access>
+        <Location left="621" top="393" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Member type="Field">private int camerasCount = 1</Member>
+        <Member type="Method">public void getCameras()</Member>
+        <Member type="Method">public void newMethod()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Scanner</Name>
+        <Access>Public</Access>
+        <Location left="925" top="566" />
+        <Size width="243" height="162" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String pathForVideo</Member>
+        <Member type="Field">private String pathForImages</Member>
+        <Member type="Method">public void capturePhoto()</Member>
+        <Member type="Method">public void captureVideo()</Member>
+        <Member type="Method">public void detectVideoMotion()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Updater</Name>
+        <Access>Public</Access>
+        <Location left="726" top="566" />
+        <Size width="187" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void checkUpdates()</Member>
+        <Member type="Method">public void downloadUpdates()</Member>
+        <Member type="Method">public void installUpdates()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Identifier</Name>
+        <Access>Public</Access>
+        <Location left="966" top="346" />
+        <Size width="162" height="146" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int userID</Member>
+        <Member type="Field">private int userPassword</Member>
+        <Member type="Field">private int userName</Member>
+        <Member type="Field">private int userEmail</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Poster</Name>
+        <Access>Public</Access>
+        <Location left="1176" top="566" />
+        <Size width="244" height="162" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private Queue&lt;File&gt; files</Member>
+        <Member type="Field">public int uploadPath = c:\googlefolder\</Member>
+        <Member type="Method">public static final void getFiles()</Member>
+        <Member type="Method">public abstract void uploadFile()</Member>
+        <Member type="Method">public abstract void deleteFile()</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Notifier</Name>
+        <Access>Public</Access>
+        <Location left="476" top="237" />
+        <Size width="162" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public abstract void sendSms()</Member>
+        <Member type="Method">public abstract void sendEmail()</Member>
+        <Member type="Method">public void sendSkype()</Member>
+        <Modifier>Abstract</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>StoneWeb</Name>
+        <Access>Public</Access>
+        <Location left="194" top="361" />
+        <Size width="162" height="90" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Stone</Name>
+        <Access>Public</Access>
+        <Location left="194" top="78" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>VideoView</Name>
+        <Access>Public</Access>
+        <Location left="118" top="658" />
+        <Size width="162" height="119" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Video</Name>
+        <Access>Public</Access>
+        <Location left="106" top="1056" />
+        <Size width="162" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int videoId</Member>
+        <Member type="Field">private Date creationTime</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Photo</Name>
+        <Access>Public</Access>
+        <Location left="698" top="1056" />
+        <Size width="162" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int phtotoId</Member>
+        <Member type="Field">private Date creationTime</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>PhotoDAO</Name>
+        <Access>Public</Access>
+        <Location left="652" top="1201" />
+        <Size width="263" height="148" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void createPhoto(Photo photo)</Member>
+        <Member type="Method">List&lt;Photo&gt; findAll()</Member>
+        <Member type="Method">List&lt;Photo&gt; findByDate(Date date)</Member>
+        <Member type="Method">void deletePhoto(Photo photo)</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>VideoDAOImpl</Name>
+        <Access>Public</Access>
+        <Location left="58" top="1408" />
+        <Size width="262" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void createVideo(Video video)</Member>
+        <Member type="Method">List&lt;Video&gt; findAll()</Member>
+        <Member type="Method">List&lt;Video&gt; findByDate(Date date)</Member>
+        <Member type="Method">void deleteVideo(Integer videoId)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>PhotoDAOImpl</Name>
+        <Access>Public</Access>
+        <Location left="652" top="1408" />
+        <Size width="263" height="147" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void createPhoto(Photo photo)</Member>
+        <Member type="Method">List&lt;Photo&gt; findAll()</Member>
+        <Member type="Method">List&lt;Photo&gt; findByDate(Date date)</Member>
+        <Member type="Method">void deletePhoto(Photo photo)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>VideoService</Name>
+        <Access>Public</Access>
+        <Location left="339" top="1201" />
+        <Size width="252" height="148" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void createVideo(Video video)</Member>
+        <Member type="Method">List&lt;Video&gt; getAll()</Member>
+        <Member type="Method">List&lt;Video&gt; getByDate(Date date)</Member>
+        <Member type="Method">void deleteVideo(Integer videoId)</Member>
+      </Entity>
+      <Entity type="Interface">
+        <Name>PhotoService</Name>
+        <Access>Public</Access>
+        <Location left="936" top="1201" />
+        <Size width="260" height="148" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void createPhoto(Photo photo)</Member>
+        <Member type="Method">List&lt;Photo&gt; getAll()</Member>
+        <Member type="Method">List&lt;Photo&gt; getByDate(Date date)</Member>
+        <Member type="Method">void deletePhoto(Integer photoId)</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>VideoServiceImpl</Name>
+        <Access>Public</Access>
+        <Location left="339" top="1408" />
+        <Size width="263" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void createVideo(Video video)</Member>
+        <Member type="Method">List&lt;Video&gt; getAll()</Member>
+        <Member type="Method">List&lt;Video&gt; getByDate(Date date)</Member>
+        <Member type="Method">void deleteVideo(Integer videoId)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>PhotoServiceImpl</Name>
+        <Access>Public</Access>
+        <Location left="936" top="1408" />
+        <Size width="264" height="149" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void createPhoto(Photo photo)</Member>
+        <Member type="Method">List&lt;Photo&gt; getAll()</Member>
+        <Member type="Method">List&lt;Photo&gt; getByDate(Date date)</Member>
+        <Member type="Method">void deletePhoto(Integer photoId)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Interface">
+        <Name>VideoDAO</Name>
+        <Access>Public</Access>
+        <Location left="58" top="1201" />
+        <Size width="259" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">void createVideo(Video video)</Member>
+        <Member type="Method">List&lt;Video&gt; findAll()</Member>
+        <Member type="Method">List&lt;Video&gt; findByDate(Date date)</Member>
+        <Member type="Method">void deleteVideo(Integer videoId)</Member>
+      </Entity>
+      <Entity type="Class">
+        <Name>VideoController</Name>
+        <Access>Public</Access>
+        <Location left="214" top="841" />
+        <Size width="167" height="99" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>PhotoController</Name>
+        <Access>Public</Access>
+        <Location left="392" top="841" />
+        <Size width="162" height="101" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>VideoModel</Name>
+        <Access>Public</Access>
+        <Location left="10" top="841" />
+        <Size width="162" height="99" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>PhotoView</Name>
+        <Access>Public</Access>
+        <Location left="493" top="658" />
+        <Size width="162" height="119" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>PhotoModel</Name>
+        <Access>Public</Access>
+        <Location left="598" top="841" />
+        <Size width="162" height="101" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>TimeService</Name>
+        <Access>Public</Access>
+        <Location left="416" top="1002" />
+        <Size width="180" height="111" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void deleteOldVideo()</Member>
+        <Member type="Method">public void deleteOldPhoto()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="2" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="4" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1048</X>
+          <Y>321</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="7" second="8">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="1" second="8">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>660</X>
+          <Y>368</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="9" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Realization" first="1" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="6" second="5">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>713</X>
+          <Y>522</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1249</X>
+          <Y>753</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="12" second="11">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>781</X>
+          <Y>1196</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Realization" first="14" second="12">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="17" second="15">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Realization" first="18" second="16">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="18" second="12">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1047</X>
+          <Y>1383</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>806</X>
+          <Y>1374</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="19" second="10">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>178</X>
+          <Y>1197</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Realization" first="13" second="19">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="17" second="19">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>449</X>
+          <Y>1383</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>209</X>
+          <Y>1371</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="23" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>510</X>
+          <Y>633</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>291</X>
+          <Y>633</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="9" second="22">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="23" second="24">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="20" second="22">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="24" second="21">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="9" second="20">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="23" second="21">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="22" second="15">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>361</X>
+          <Y>1125</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="24" second="16">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>733</X>
+          <Y>967</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1062</X>
+          <Y>1094</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="25" second="15">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>458</X>
+          <Y>1150</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>486</X>
+          <Y>1175</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="25" second="16">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1012</X>
+          <Y>1173</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1088</X>
+          <Y>1177</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="25" second="7">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>396</X>
+          <Y>977</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>387</X>
+          <Y>550</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Composition</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
