@@ -1,3 +1,5 @@
+package fileScanner;
+
 /**
  * Created by pc on 9/2/2015.
  */

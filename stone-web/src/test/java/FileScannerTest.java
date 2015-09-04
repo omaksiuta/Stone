@@ -3,7 +3,7 @@
  */
 public class FileScannerTest {
     //TODO: After launch scanner not closed
-    //In working starus, when file is available and has date less the 24 hours
+    //In working status, when file is available and has date less the 24 hours
 //    then, after sending RUN event, file is deleted  it
 
 //    BDD, jUnit
