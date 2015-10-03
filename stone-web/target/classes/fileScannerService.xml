@@ -10,14 +10,14 @@
     <task:annotation-driven/>
 
     <context:component-scan base-package="fileScanner"/>
-<!--
+
+    <!--
     <bean id="scheduledEvent" class="fileScanner.FileScannerImpl"/>
 
     <task:scheduled-tasks>
         <task:scheduled ref="scheduledEvent" method="deleteOldVideo" cron="0 0 12 * * ?"/>
         <task:scheduled ref="scheduledEvent" method="deleteOldPhoto" cron="0 0 12 * * ?"/>
     </task:scheduled-tasks>
-
     -->
 
 </beans>
